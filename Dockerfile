@@ -18,19 +18,28 @@ RUN \
   apt-get install -y byobu curl dialog git htop man net-tools unzip vim wget
 
 # Install Python.
-RUN add-apt-repository ppa:jonathonf/python-3.6 && \
+RUN \
+  add-apt-repository ppa:jonathonf/python-3.6 && \
   apt-get update && \
-  apt-get install -y python-software-properties python3.6 python3-pip && \
-  apt-get pip3 install --upgrade pip
+  apt-get install -y python-software-properties python3.6 python3-pip
+
+RUN pip3 install --upgrade pip
 
 # Clear apt-get cache.
 RUN rm -rf /var/lib/apt/lists/*
 
+# Add the source code to the image.
+ADD . /app/
+
 # Set environment variables.
-ENV HOME /root
+ENV HOME /app
 
 # Define working directory.
-WORKDIR /root
+WORKDIR /app
 
-# Define default command.
-CMD ["bash"]
+# Install Flask.
+RUN pip3 install -r requirements.txt
+
+# Run the Flask server.
+EXPOSE 8080
+CMD ["python3", "/app/app.py"]
