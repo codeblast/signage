@@ -26,7 +26,9 @@ RUN \
 RUN pip3 install --upgrade pip
 
 # Clear apt-get cache.
-RUN rm -rf /var/lib/apt/lists/*
+RUN \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add the source code to the image.
 ADD . /app/
