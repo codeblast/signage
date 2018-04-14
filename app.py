@@ -8,12 +8,18 @@ app.register_blueprint(checkin)
 
 @app.route('/')
 def hello():
-    return 'Try <a href="/pages/checkin.html">checkin.html</a>'
+    return ('<a href="/admin/checkin.html">Activate check-in</a> '
+    	    'or <a href="/pages/checkin.html">view FIDS page</a>?')
 
 
 @app.route('/pages/<path:path>')
 def send_pages(path):
     return send_from_directory('pages', path)
+
+
+@app.route('/admin/<path:path>')
+def send_admin(path):
+    return send_from_directory('admin', path)
 
 
 if __name__ == '__main__':
