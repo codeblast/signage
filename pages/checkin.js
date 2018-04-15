@@ -1,8 +1,8 @@
 // What would be an appropriate (descriptive) comment here (if any)?
 
 function update(update) {
-	var fields = ["airline", "counter", "flight", "departure", "gate", 
-				  "destination","seat-class", "boarding", "display-msg"];
+	var fields = ["airline", "counter", "flight", "departure", "destination",
+				  "seat-class", "boarding", "gate", "message"];
 
 	for (var n = 0; n < fields.length; n++) {
 		var fieldName = fields[n];
