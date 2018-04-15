@@ -1,0 +1,8 @@
+.dockerignore
+.git
+.gitignore
+docker_run.sh
+Dockerfile
+LICENSE
+README.md
+VERSION
