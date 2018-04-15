@@ -1,0 +1,43 @@
+/* WHAT IS THE CONVENTION FOR ORDERING A STYLESHEET? */
+/* Order of selectors (largest scope first?), alphabetized? */
+
+
+#screen {
+
+}
+
+#airline {
+
+}
+
+#counter {
+
+}
+
+#flight {
+
+}
+
+#departure {
+
+}
+
+#destination {
+
+}
+
+#seat-class {
+
+}
+
+#boarding {
+
+}
+
+#gate {
+	
+}
+
+#message {
+
+}
