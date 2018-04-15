@@ -1,4 +1,54 @@
-<p>TODO: show check-in counter info here</p>
+<!DOCTYPE html>
+<html>
 
-<p>Eventually we'll load JSON data from
-    <a href="/api/checkin">/api/checkin</a> to show on this page.</p>
+<head>
+	<title>FIDS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="checkin.css">
+</head>
+
+<body>
+
+	<div class="container-fluid" id="screen">
+		<div id="top">
+			<div class="row">
+				<!-- Airline name -->
+				<div class="col-8" id="airline"></div>
+				<!-- Check-in counter number -->
+				<div class="col-4" id="counter"></div>
+			</div>
+		</div>
+		<div id="middle">
+			<div class="row">
+				<!-- Flight number -->
+				<div class="col-8" id="flight"></div>
+				<!-- Departure time -->
+				<div class="col-4" id="departure"></div>
+			</div>
+			<div class="row">
+				<!-- Destination -->
+				<div class="col-12" id="destination"></div> <!-- need to add origin -->
+			</div>
+			<div class="row">
+				<!-- Seat class -->
+				<div class="col-12" id="seat-class"></div>
+			</div>
+		</div>
+		<div id="bottom">
+			<div class="row">
+				<!-- Boarding time -->
+				<div class="col-6" id="boarding"></div>
+				<!-- Gate number -->
+				<div class="col-6" id="gate"></div>
+			</div>
+			<div class="row">
+				<!-- Message for customer (maybe personalized?) -->
+				<div class="col-12" id="message"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="checkin.js"></script>
+</body>
+
+</html>
