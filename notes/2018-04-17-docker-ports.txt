@@ -1,9 +1,10 @@
 How do I get two or more images share the same host port?
 
-At the moment, we have two images exporting their HTTP ports:
+At the moment, we have three images exporting their HTTP ports:
 
-1. api: port 8080 (flask default)
-2. pages: port 80 (nginx default)
+1. admin: port 8081 (nginx default port 80 mapped to local port 8081)
+3. api: port 8080 (flask default)
+3. pages: port 80 (nginx default)
 
 Eventually I'd like all HTTP servers to share the same port.
 Is this possible with port mapping in docker-compose.yml,

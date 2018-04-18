@@ -1,5 +1,11 @@
 version: '3.6'
 services:
+  admin:
+    build: admin
+    networks:
+      - frontend
+    ports:
+      - "8081:80"
   api:
     build:
       context: ./
@@ -24,13 +30,14 @@ services:
   pages:
     build: pages
     networks:
-      - frontend
+      - display
     ports:
       - "80:80"
 
 networks:
   backend:
   frontend:
+  display:
 
 volumes:
  db-data:
