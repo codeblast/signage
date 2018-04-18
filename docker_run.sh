@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-docker build . -t signage
-
-docker run -it -p 8080:8080 signage
+docker-compose down
+docker-compose rm -fs
+docker-compose build && docker-compose up

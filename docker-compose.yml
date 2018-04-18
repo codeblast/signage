@@ -1,0 +1,29 @@
+version: '3.6'
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    depends_on:
+      - db
+    networks:
+      - backend
+    ports:
+      - "8080:8080"
+  db:
+    build: db
+    environment:
+      POSTGRES_DB: signage
+      POSTGRES_PASSWORD: pwd
+      POSTGRES_USER: signage
+    networks:
+      - backend
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+
+networks:
+  backend:
+
+volumes:
+ db-data:
