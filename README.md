@@ -2,6 +2,15 @@
 
 This is a digital signage prototype web app.
 
+## Running
+
+1. Clone this repo.
+2. Install [Docker](https://www.docker.com/) on your development machine.
+3. Run `./docker_run.sh` to start up all the Docker images.
+4. Open http://localhost:8081/admin/index.html to try it out.
+
+## Architecture
+
 We'll start with a very basic [Flight 
 Information Display System](https://en.wikipedia.org/wiki/Flight_information_display_system) (FIDS)
 feature: Check-in Counter Activation.
@@ -31,6 +40,8 @@ The initial architecture is super simple; four separate layers/technologies:
                          |(PostgreSQL)      |
                          +------------------+
 ```
+
+## Future?
 
 We'll take an iterative development
 approach, i.e. by building a very simple prototype
