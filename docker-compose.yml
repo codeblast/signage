@@ -21,9 +21,16 @@ services:
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data:rw
+  pages:
+    build: pages
+    networks:
+      - frontend
+    ports:
+      - "80:80"
 
 networks:
   backend:
+  frontend:
 
 volumes:
  db-data:

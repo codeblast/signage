@@ -8,13 +8,9 @@ app.register_blueprint(checkin)
 
 @app.route('/')
 def hello():
+    # TODO(glombard): figure out how to deal with this 8080 vs 80 port split
     return ('<a href="/admin/checkin.html">Activate check-in</a> '
-    	    'or <a href="/pages/checkin.html">view FIDS page</a>?')
-
-
-@app.route('/pages/<path:path>')
-def send_pages(path):
-    return send_from_directory('pages', path)
+    	    'or <a href="http://localhost/pages/checkin.html">view FIDS page</a>?')
 
 
 @app.route('/admin/<path:path>')
