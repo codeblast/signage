@@ -1,6 +1,6 @@
 from flask import Flask, redirect
 
-from api.checkin import checkin
+from checkin import checkin
 
 app = Flask(__name__)
 app.register_blueprint(checkin)

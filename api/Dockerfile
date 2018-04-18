@@ -35,17 +35,17 @@ RUN \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add the source code to the image.
-ADD . /app/
+ADD . /api
 
 # Set environment variables.
-ENV HOME /app
+ENV HOME /api
 
 # Define working directory.
-WORKDIR /app
+WORKDIR /api
 
 # Install Flask.
 RUN pip3 install -r requirements.txt
 
 # Run the Flask server.
 EXPOSE 8080
-CMD ["python3", "/app/app.py"]
+CMD ["python3", "/api/app.py"]

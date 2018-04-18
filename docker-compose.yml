@@ -2,14 +2,14 @@ version: '3.6'
 services:
   admin:
     build: admin
+    depends_on:
+      - api
     networks:
       - frontend
     ports:
       - "8081:80"
   api:
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
+    build: api
     depends_on:
       - db
     networks:
@@ -29,6 +29,8 @@ services:
       - db-data:/var/lib/postgresql/data:rw
   pages:
     build: pages
+    depends_on:
+      - api
     networks:
       - display
     ports:
