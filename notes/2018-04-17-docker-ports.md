@@ -12,10 +12,12 @@ or would the servers need to be configured to serve at the
 correct port? I.e. I guess I'd have to change the API's
 Flask initialization to `app.run(port=80, host='0.0.0.0')`.
 
-# commands
+## commands
 
 tonight I had to merge a new file to my previous commit
 (before pushing to github of course), so this seems to work:
 
+```bash
 git add .
 git commit --amend --no-edit
+```

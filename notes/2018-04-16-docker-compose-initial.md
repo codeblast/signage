@@ -28,6 +28,7 @@ docker-compose up
 Some random commands from my shell history that seemed
 like I may need to refer back to this later. ?????
 
+```bash
 docker-compose build
 docker-compose up
 docker-compose build && docker-compose down && docker-compose up
@@ -39,6 +40,7 @@ docker build db/ -t db && docker run -it db bash
 psql -d signage -U signage -W
 psql -d signage -U signage -W -f /docker-entrypoint-initdb.d/01-create-checkin-db.sql
 ls /docker-entrypoint-initdb.d/
+```
 
 # BLOCKING ISSUE - USER FOO DOES NOT WORK:
 
